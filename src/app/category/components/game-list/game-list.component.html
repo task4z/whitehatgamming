@@ -1,0 +1,5 @@
+<div class="grid">
+  <div *ngFor="let game of (selectedCategoryGameItems$ | async)?.games">
+    <app-game-card [game]="game"></app-game-card>
+  </div>
+</div>

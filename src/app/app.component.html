@@ -1,0 +1,6 @@
+<ng-container *ngIf="allCategoriesGameItems$ | async as allCategoriesGameItems">
+  <ng-container *ngIf="allCategoriesGameItems.length > 0">
+    <app-topBar [allCategoriesGameItems]="allCategoriesGameItems"></app-topBar>
+    <router-outlet></router-outlet>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,18 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 10%);
+  height: 43px;
+}
+
+span {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  font-family: Calibri;
+  font-size: 18px;
+}

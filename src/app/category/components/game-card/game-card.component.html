@@ -1,0 +1,32 @@
+<div *ngIf="game" class="card-container">
+  <div class="image-container">
+    <img
+      [src]="game.image"
+      alt="{{ game.name }}"
+      class="main-image"
+      width="180"
+      height="120"
+      (error)="updateUrl(game)"
+    />
+    <span *ngIf="game.amount" class="amount">{{
+      game.amount | currency: "GBP"
+    }}</span>
+    <div class="top-new" *ngIf="game.isNew || game.isTop">
+      <img
+        *ngIf="game.isTop"
+        src="../../../../assets/altop.png"
+        alt="top"
+        class="top"
+        width="60"
+      />
+      <img
+        *ngIf="game.isNew"
+        src="../../../../assets/alnew.png"
+        alt="new"
+        class="new"
+        width="60"
+      />
+    </div>
+    <div class="play"></div>
+  </div>
+</div>

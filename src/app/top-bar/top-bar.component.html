@@ -1,0 +1,14 @@
+<div class="grid bg2">
+  <ng-container *ngFor="let item of allCategoriesGameItems">
+    <a
+      class="flex align-center"
+      [routerLink]="['/category/', item.category.name]"
+      (click)="select(item.category.name)"
+      [class.bg1]="(selectedCategory$ | async) === item.category.name"
+    >
+      <span class="color3 text-center" title="{{ item.category.label }}">{{
+        item.category.label
+      }}</span>
+    </a>
+  </ng-container>
+</div>
